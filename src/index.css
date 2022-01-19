@@ -1,13 +1,53 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+  .btn {
+    @apply rounded-md border border-gray-300 px-6 py-2 mt-4 text-gray-900  bg-white  hover:bg-gray-200;
+  }
+
+  .btn-principal {
+    @apply rounded-md border-none px-6 py-2 mt-4 text-white bg-blue-400  hover:bg-blue-500;
+  }
+
+  .input-text {
+    @apply w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600 shadow-md;
+  }
+
+  .grupo-item {
+    @apply mt-3;
+  }
+
+  .label {
+    @apply block text-gray-500;
+  }
+
+  .label-erro {
+    @apply bg-red-100 text-red-500 border border-red-200 text-xs px-3 py-1 mt-2 rounded-lg w-max;
+  }
+
+  .label-destaque {
+    @apply block font-bold;
+  }
+
+  .container-padrao {
+    @apply xl:w-1/3 lg:w-3/5 md:w-3/5 sm:w-3/4 w-full rounded-2xl px-8 py-6 mt-4 text-left bg-white shadow-lg;
+  }
+
+  .container-titulo {
+    @apply text-2xl font-bold py-4 text-center;
+  }
+
+  .container-subtitulo {
+    @apply block text-black font-bold;
+  }
+
+  .container-rodape {
+    @apply flex items-baseline justify-between;
+  }
+
+  .alerta {
+    @apply w-full mt-3 bg-red-100 text-red-500 text-xs border border-red-200 p-3 rounded-lg shadow-md;
+  }
 }
